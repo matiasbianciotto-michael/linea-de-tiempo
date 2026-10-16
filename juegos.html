@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Juegos interactivos creados a partir de los trabajos de los alumnos para celebrar el centenario del Michael Ham College."
+    />
+
+    <title>Juegos | Michael Ham College</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido"> Saltar al contenido </a>
+
+    <!-- ==================================================
+       01. ENCABEZADO
+       ================================================== -->
+
+    <header class="site-header">
+      <div class="header-content container">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Michael Ham College. Inicio"
+        >
+          <img
+            class="brand-logo"
+            src="imagenes/escudo_michael_ham_transparente.png"
+            alt="Escudo del Michael Ham College"
+          />
+
+          <span class="brand-text">
+            <span class="brand-name">Michael Ham College.</span>
+            <span class="brand-description">Página creada por alumnos</span>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="juegos.html" aria-current="page">Juegos</a>
+          <a href="aboutUs.html">Sobre esta página</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================================================
+       02. CONTENIDO PRINCIPAL
+       ================================================== -->
+
+    <main
+      class="secondary-main container"
+      id="contenido"
+      aria-label="Juegos de los alumnos"
+    >
+      <!-- ================================================
+         03. PRESENTACIÓN DE LOS JUEGOS
+         ================================================ -->
+
+      <section
+        class="games-introduction"
+        id="presentacion-juegos"
+        aria-labelledby="games-title"
+      >
+        <div class="games-introduction-content">
+          <span class="games-eyebrow">
+            1926 — 2026 · Proyecto del Centenario
+          </span>
+
+          <h1 id="games-title">¡Aprendé jugando!</h1>
+
+          <p class="games-description">
+            Poné a prueba tus conocimientos sobre los 100 años del Michael Ham
+            College y descubrí los avances tecnológicos que acompañaron su
+            historia.
+          </p>
+
+          <p class="games-description-secondary">
+            Explorá los desafíos en los juegos creados por los alumnos. Elegí
+            una actividad y empezá a jugar.
+          </p>
+        </div>
+
+        <div class="games-introduction-icon" aria-hidden="true">🎮</div>
+      </section>
+
+      <!-- ================================================
+         04. CATÁLOGO DE JUEGOS
+         ================================================ -->
+
+      <section
+        class="games-catalog"
+        id="catalogo-juegos"
+        aria-labelledby="catalog-title"
+      >
+        <div class="games-section-heading">
+          <h2 id="catalog-title">Elegí un desafío</h2>
+
+          <p>Cuatro formas diferentes de recorrer nuestra historia.</p>
+        </div>
+
+        <div class="games-grid">
+          <!-- JUEGO 1: TRIVIA -->
+
+          <article class="game-card game-card-trivia">
+            <div class="game-card-icon" aria-hidden="true">🧠</div>
+
+            <div class="game-card-content">
+              <h3>Desafío del Centenario</h3>
+
+              <p>
+                Respondé preguntas sobre la historia del colegio, sus
+                tradiciones y los principales avances tecnológicos.
+              </p>
+
+              <div class="game-card-details">
+                <span>10 preguntas</span>
+                <span>Trivia</span>
+              </div>
+            </div>
+
+            <button
+              class="game-card-button"
+              type="button"
+              data-game="trivia"
+              aria-label="Jugar al Desafío del Centenario"
+            >
+              Jugar
+              <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- JUEGO 2: ORDENAR ACONTECIMIENTOS -->
+
+          <article class="game-card game-card-timeline">
+            <div class="game-card-icon" aria-hidden="true">🗓️</div>
+
+            <div class="game-card-content">
+              <h3>Ordená la Historia</h3>
+
+              <p>
+                ¿Qué ocurrió primero? Organizá los acontecimientos del colegio y
+                de la tecnología en orden cronológico.
+              </p>
+
+              <div class="game-card-details">
+                <span>3 rondas</span>
+                <span>Cronología</span>
+              </div>
+            </div>
+
+            <button
+              class="game-card-button"
+              type="button"
+              data-game="ordenar"
+              aria-label="Jugar a Ordená la Historia"
+            >
+              Jugar
+              <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- JUEGO 3: RELACIONAR PERSONAJES -->
+
+          <article class="game-card game-card-matching">
+            <div class="game-card-icon" aria-hidden="true">🔗</div>
+
+            <div class="game-card-content">
+              <h3>Conectá los Acontecimientos</h3>
+
+              <p>
+                Descubrí quién está detrás de cada invento, descubrimiento o
+                acontecimiento histórico.
+              </p>
+
+              <div class="game-card-details">
+                <span>5 rondas</span>
+                <span>Asociaciones</span>
+              </div>
+            </div>
+
+            <button
+              class="game-card-button"
+              type="button"
+              data-game="relacionar"
+              aria-label="Jugar a Conectá los Acontecimientos"
+            >
+              Jugar
+              <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- JUEGO 4: ADIVINAR EL AÑO -->
+
+          <article class="game-card game-card-years">
+            <div class="game-card-icon" aria-hidden="true">📷</div>
+
+            <div class="game-card-content">
+              <h3>¿En qué año ocurrió?</h3>
+
+              <p>
+                Observá las imágenes, descubrí los acontecimientos y tratá de
+                acertar el año en que sucedieron.
+              </p>
+
+              <div class="game-card-details">
+                <span>8 rondas</span>
+                <span>Fechas históricas</span>
+              </div>
+            </div>
+
+            <button
+              class="game-card-button"
+              type="button"
+              data-game="fechas"
+              aria-label="Jugar a ¿En qué año ocurrió?"
+            >
+              Jugar
+              <span aria-hidden="true">→</span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================================================
+         05. CONTENEDOR DEL JUEGO SELECCIONADO
+         ================================================ -->
+
+      <section
+        class="games-player"
+        id="contenedor-juego"
+        aria-labelledby="juego-titulo"
+        hidden
+      >
+        <!-- Encabezado del juego -->
+
+        <div class="game-player-header">
+          <button class="game-back-button" type="button" id="volver-juegos">
+            <span aria-hidden="true">←</span>
+            Volver a los juegos
+          </button>
+
+          <div class="game-player-heading">
+            <span class="game-player-category" id="juego-categoria"></span>
+
+            <h2 id="juego-titulo"></h2>
+
+            <p id="juego-descripcion"></p>
+          </div>
+        </div>
+
+        <!-- Área de juego -->
+
+        <div class="game-workspace">
+          <!-- Información de la partida -->
+
+          <div class="game-status" id="juego-estado" hidden>
+            <div class="game-status-information">
+              <span
+                class="game-progress-label"
+                id="juego-progreso-texto"
+              ></span>
+
+              <span class="game-score" id="juego-puntaje"></span>
+            </div>
+
+            <div class="game-progress-track" id="juego-progreso-contenedor">
+              <div class="game-progress-fill" id="juego-progreso-barra"></div>
+            </div>
+          </div>
+
+          <!-- Contenido generado mediante JavaScript -->
+
+          <div class="game-content" id="juego-contenido"></div>
+
+          <!-- Mensajes de corrección y devolución -->
+
+          <div
+            class="game-feedback"
+            id="juego-mensaje"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+
+          <!-- Acciones de la partida -->
+
+          <div class="game-actions" id="juego-acciones"></div>
+        </div>
+      </section>
+
+      <!-- ================================================
+         06. INFORMACIÓN DEL PROYECTO
+         ================================================ -->
+
+      <section
+        class="games-project-information"
+        id="informacion-juegos"
+        aria-labelledby="games-project-title"
+      >
+        <div class="games-project-icon" aria-hidden="true">🎓</div>
+
+        <div class="games-project-content">
+          <h2 id="games-project-title">
+            Juegos creados a partir de los trabajos de los alumnos
+          </h2>
+
+          <p>
+            Estas actividades reúnen las propuestas desarrolladas por
+            estudiantes en las áreas de Tecnología y Programación, en el marco
+            del centenario del Michael Ham College.
+          </p>
+
+          <p>
+            A través de los juegos, te invitamos a conocer cómo evolucionaron el
+            colegio y la tecnología durante estos cien años.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================================================
+       07. PIE DE PÁGINA
+       ================================================== -->
+
+    <footer class="site-footer">
+      <div class="footer-content container">
+        <p>Página no oficial de la escuela. Creada por alumnos</p>
+
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="juegos.html" aria-current="page">Juegos</a>
+          <a href="aboutUs.html">Sobre esta página</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Una línea de tiempo creada por alumnos para recorrer la historia del Michael Ham y los cambios tecnológicos de estos cien años."
+    />
+
+    <title>Centenario | Michael Ham College</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-content container">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Michael Ham College. Inicio"
+        >
+          <img
+            class="brand-logo"
+            src="imagenes/escudo_michael_ham_transparente.png"
+            alt="Escudo del Michael Ham College"
+          />
+
+          <span class="brand-text">
+            <span class="brand-name">Michael Ham College.</span>
+            <span class="brand-description">Página creada por alumnos</span>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html" aria-current="page">Inicio</a>
+          <a href="juegos.html">Juegos</a>
+          <a href="aboutUs.html">Sobre esta página</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="introduction container" aria-labelledby="page-title">
+        <h1 id="page-title">100 años de historia… y cambios</h1>
+
+        <p class="introduction-text">
+          En el marco del centenario del Michael Ham, los alumnos crearon esta
+          línea de tiempo investigando, seleccionando y organizando datos
+          históricos, y diseñaron juegos a partir de ellos. Aplicando las
+          herramientas de Tecnología, Programación y Robótica, exploraron los
+          cambios que transformaron el mundo y cómo el colegio se adaptó y
+          siguió creciendo a lo largo de estos cien años.
+        </p>
+
+        <figure class="school-figure">
+          <img
+            class="school-image"
+            src="https://michaelham.org.ar/wp-content/uploads/2024/08/foto-aerea-admisiones-v2-tiny-scaled.jpg"
+            alt="Vista aérea de la sede del Michael Ham"
+            decoding="async"
+          />
+        </figure>
+      </section>
+
+      <section
+        class="timeline-section container"
+        id="linea-de-tiempo"
+        aria-labelledby="timeline-heading"
+      >
+        <h2 id="timeline-heading">Explorá nuestra línea de tiempo</h2>
+
+        <div class="timeline-workspace">
+          <article
+            class="event-card"
+            id="event-card"
+            aria-labelledby="event-title"
+          >
+            <figure class="event-figure">
+              <button
+                class="event-photo-button"
+                id="event-photo-button"
+                type="button"
+                aria-label="Ver imagen completa del evento"
+                aria-haspopup="dialog"
+                disabled
+                hidden
+              >
+                <img
+                  class="event-photo"
+                  id="event-photo"
+                  alt=""
+                  decoding="async"
+                />
+              </button>
+
+              <div
+                class="image-fallback"
+                id="event-image-fallback"
+                role="img"
+                aria-label="Evento sin imagen disponible"
+              >
+                <span id="event-fallback-icon" aria-hidden="true">🏫</span>
+                <span>Imagen no disponible</span>
+              </div>
+
+              <figcaption
+                class="event-caption"
+                id="event-caption"
+                hidden
+              ></figcaption>
+            </figure>
+
+            <div class="event-information">
+              <div class="event-metadata">
+                <span class="category-badge" id="event-category"></span>
+                <span class="event-year" id="event-year"></span>
+              </div>
+
+              <h3 id="event-title">Cargando eventos…</h3>
+
+              <p class="event-description" id="event-description"></p>
+
+              <div class="event-actions">
+                <button
+                  class="curiosity-toggle"
+                  id="curiosity-toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="event-curiosity"
+                  hidden
+                >
+                  ¿Sabías que?
+                  <span class="curiosity-arrow" aria-hidden="true">↓</span>
+                </button>
+
+                <div class="event-links" id="event-links" hidden></div>
+              </div>
+
+              <div
+                class="curiosity-panel"
+                id="event-curiosity"
+                role="region"
+                aria-labelledby="curiosity-toggle"
+                inert
+              >
+                <div class="curiosity-panel-inner">
+                  <p id="event-curiosity-text"></p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="event-navigation" aria-label="Navegación entre eventos">
+            <button
+              class="secondary-button"
+              id="previous-event"
+              type="button"
+              aria-label="Ver evento anterior"
+            >
+              <span aria-hidden="true">←</span>
+              Anterior
+            </button>
+
+            <p class="event-counter" id="event-counter"></p>
+
+            <button
+              class="secondary-button"
+              id="next-event"
+              type="button"
+              aria-label="Ver evento siguiente"
+            >
+              Siguiente
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <nav
+            class="period-navigation"
+            id="period-navigation"
+            aria-label="Períodos de la línea de tiempo"
+          ></nav>
+
+          <div class="timeline-toolbar">
+            <p>Elegí un círculo para descubrir su historia.</p>
+
+            <div class="timeline-scroll-buttons">
+              <button
+                class="round-button"
+                id="scroll-timeline-left"
+                type="button"
+                aria-label="Desplazar la línea de tiempo hacia la izquierda"
+                aria-controls="timeline-scroll"
+              >
+                <span aria-hidden="true">←</span>
+              </button>
+
+              <button
+                class="round-button"
+                id="scroll-timeline-right"
+                type="button"
+                aria-label="Desplazar la línea de tiempo hacia la derecha"
+                aria-controls="timeline-scroll"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="timeline-board">
+            <div class="timeline-labels" aria-hidden="true">
+              <div class="track-label track-label-school">
+                <span class="track-icon">🏫</span>
+                <span>Historia del Michael Ham</span>
+              </div>
+
+              <div class="years-label">AÑOS</div>
+
+              <div class="track-label track-label-technology">
+                <span class="track-icon">💡</span>
+                <span>Cambios tecnológicos</span>
+              </div>
+            </div>
+
+            <div
+              class="timeline-scroll"
+              id="timeline-scroll"
+              role="region"
+              aria-label="Línea de tiempo: historia del Michael Ham arriba y cambios tecnológicos abajo"
+              aria-describedby="timeline-note"
+              tabindex="0"
+            >
+              <div class="timeline-columns" id="timeline-columns"></div>
+            </div>
+          </div>
+
+          <p class="timeline-note" id="timeline-note">
+            Las distancias entre eventos no representan los años transcurridos.
+          </p>
+        </div>
+
+        <p
+          class="visually-hidden"
+          id="selection-announcement"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
+
+        <noscript>
+          <p>
+            Activá JavaScript para explorar los eventos de la línea de tiempo.
+          </p>
+        </noscript>
+      </section>
+
+      <section
+        class="play-section container"
+        aria-label="Juegos de los alumnos"
+      >
+        <a class="play-button" href="juegos.html">¡Ahora podés jugar!</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content container">
+        <p>Página no oficial de la escuela. Creada por alumnos</p>
+
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <a href="index.html" aria-current="page">Inicio</a>
+          <a href="juegos.html">Juegos</a>
+          <a href="aboutUs.html">Sobre esta página</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div
+      class="event-preview"
+      id="event-preview"
+      popover="manual"
+      aria-hidden="true"
+    >
+      <img class="preview-image" id="preview-image" alt="" />
+
+      <span
+        class="preview-icon"
+        id="preview-icon"
+        aria-hidden="true"
+        hidden
+      ></span>
+
+      <div class="preview-content">
+        <strong id="preview-year"></strong>
+        <span id="preview-title"></span>
+      </div>
+    </div>
+
+    <dialog
+      class="image-dialog"
+      id="image-dialog"
+      aria-labelledby="image-dialog-title"
+    >
+      <div class="image-dialog-content">
+        <div class="image-dialog-header">
+          <h2 id="image-dialog-title">Imagen del evento</h2>
+
+          <button
+            class="dialog-close"
+            id="close-image-dialog"
+            type="button"
+            aria-label="Cerrar imagen"
+            autofocus
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <img class="dialog-image" id="dialog-image" alt="" />
+
+        <p class="dialog-caption" id="dialog-caption" hidden></p>
+      </div>
+    </dialog>
+  </body>
+</html>
